@@ -333,7 +333,7 @@ class CallbackModule(CallbackBase):
         """
         msg = MIMEMultipart()
         msg['From'] = send_from
-        msg['To'] = COMMASPACE.join(send_to)
+        msg['To'] = COMMASPACE.join(send_to.split(','))
         msg['Date'] = formatdate()
         msg['Subject'] = subject
 
